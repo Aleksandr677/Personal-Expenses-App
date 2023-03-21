@@ -18,10 +18,10 @@ class Chart extends StatelessWidget {
             recentTransactions[i].date.month == weekDay.month &&
             recentTransactions[i].date.year == weekDay.year) {
           totalSum += recentTransactions[i].amount;
-        };
+        }
       }
       return {"day": DateFormat.E().format(weekDay).substring(0, 1), "amount": totalSum};
-    });
+    }).reversed.toList();
   }
 
   double get maxSpending {
